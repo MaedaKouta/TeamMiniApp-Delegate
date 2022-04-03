@@ -12,10 +12,10 @@ protocol SaveMikanCountDelegate{
 
 class MikanListViewController: UIViewController {
     
-    var mikanCount: Int = 0
-    var delegate: SaveMikanCountDelegate?
-    var mikanList: [String] = []
-    @IBOutlet weak var tableView: UITableView!
+    public var mikanCount: Int = 0
+    public var delegate: SaveMikanCountDelegate?
+    private var mikanList: [String] = []
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +25,13 @@ class MikanListViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedMikanCountSaveButton(_ sender: Any) {
+    @IBAction private func tappedMikanCountSaveButton(_ sender: Any) {
         delegate?.saveMikanCount(mikanCount: mikanList.count)
         // dismiss(animated: true, completion: nil) // なぜか一つ前の画面に戻れない。下記のpopView~で対処
         navigationController?.popViewController(animated: true)
     }
     
-    func setUpTableView(){
+    private func setUpTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MikanTableViewCell", bundle: nil), forCellReuseIdentifier: "MikanCell")

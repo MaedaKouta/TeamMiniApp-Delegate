@@ -42,6 +42,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="編集"/>
+                                <connections>
+                                    <action selector="tappedMikanEditButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="54x-zZ-nyN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGl-7m-q9b">
                                 <rect key="frame" x="181" y="590" width="53" height="31"/>
@@ -96,6 +99,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="編集"/>
+                                <connections>
+                                    <action selector="tappedMikanEditButton:" destination="Jvc-SQ-HSn" eventType="touchUpInside" id="O8X-K8-EoS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yQn-r5-7cP"/>
@@ -103,7 +109,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="tD8-Wt-7mZ"/>
                     <connections>
-                        <segue destination="m51-9V-gou" kind="show" id="jsq-gf-jbi"/>
+                        <outlet property="MikanCountLabel" destination="3KO-g0-LIK" id="jUK-tD-1ER"/>
+                        <segue destination="m51-9V-gou" kind="show" identifier="MikanSegue2" id="jsq-gf-jbi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zq-2f-lI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -127,11 +134,20 @@
                         <viewLayoutGuide key="safeArea" id="M6H-5e-Sso"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ild-tZ-6Kq"/>
+                    <navigationItem key="navigationItem" id="Ild-tZ-6Kq">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="nto-Ft-xrt">
+                            <connections>
+                                <action selector="tappedMikanCountSaveButton:" destination="m51-9V-gou" id="CIv-Uw-z0K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="YlL-1R-o8G" id="pCA-9O-SD0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cb9-AO-L93" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2400" y="-257.14285714285711"/>
+            <point key="canvasLocation" x="2398.5507246376815" y="-257.14285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nv5-OA-Hqz">

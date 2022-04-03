@@ -6,24 +6,51 @@
 //
 
 import UIKit
+protocol SaveMikanCountDelegate{
+    func saveMikanCount(mikanCount: Int)
+}
 
 class MikanListViewController: UIViewController {
-
+    
+    var mikanCount: Int = 0
+    var delegate: SaveMikanCountDelegate?
+    var mikanList: [String] = []
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpTableView()
+        for _ in 0..<mikanCount{
+            mikanList.append("みかん")
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tappedMikanCountSaveButton(_ sender: Any) {
+        delegate?.saveMikanCount(mikanCount: mikanList.count)
+        // dismiss(animated: true, completion: nil) // なぜか一つ前の画面に戻れない。下記のpopView~で対処
+        navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    func setUpTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "MikanTableViewCell", bundle: nil), forCellReuseIdentifier: "MikanCell")
+    }
+}
+extension MikanListViewController: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mikanList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MikanCell", for: indexPath) as! MikanTableViewCell
+        cell.mikanLabel.text = "みかん"
+        return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                mikanList.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 }

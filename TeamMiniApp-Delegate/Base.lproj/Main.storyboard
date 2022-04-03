@@ -48,6 +48,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="編集"/>
+                                <connections>
+                                    <segue destination="98W-H6-QZt" kind="show" id="rJ6-eE-e3Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-OC-Qx0">
                                 <rect key="frame" x="193" y="561" width="29" height="21"/>
@@ -65,6 +68,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704" y="104"/>
+        </scene>
+        <!--Tamago Top View Controller-->
+        <scene sceneID="fNE-qB-Fs5">
+            <objects>
+                <viewController storyboardIdentifier="TamagoTopVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="98W-H6-QZt" customClass="TamagoTopViewController" customModule="TeamMiniApp_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pP2-OZ-nF8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="たまご" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHx-Zk-uEC">
+                                <rect key="frame" x="181" y="173" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9f-Ww-cW1">
+                                <rect key="frame" x="193" y="212" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otY-mR-mtd">
+                                <rect key="frame" x="181" y="263" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="編集"/>
+                                <connections>
+                                    <segue destination="cBm-AD-AzJ" kind="show" identifier="nextVC" id="feK-JZ-5ez"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qDP-Gd-ktG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iQt-7n-LJH"/>
+                    <connections>
+                        <outlet property="countLabel" destination="E9f-Ww-cW1" id="gQ4-Za-Lyj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZ8-1M-TDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1563.768115942029" y="411.83035714285711"/>
+        </scene>
+        <!--Tamago Deletion View Controller-->
+        <scene sceneID="O8v-1V-xfm">
+            <objects>
+                <viewController storyboardIdentifier="TamagoDeletionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cBm-AD-AzJ" customClass="TamagoDeletionViewController" customModule="TeamMiniApp_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OxY-bS-vXD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ENv-V1-eqe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTamago" id="eE7-0O-CZA">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eE7-0O-CZA" id="NcC-S0-niw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cBm-AD-AzJ" id="Lh8-dZ-QI9"/>
+                                    <outlet property="delegate" destination="cBm-AD-AzJ" id="Ncx-CR-YRg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Spb-Gn-9dW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ENv-V1-eqe" firstAttribute="trailing" secondItem="Spb-Gn-9dW" secondAttribute="trailing" id="JKK-MJ-ydy"/>
+                            <constraint firstItem="ENv-V1-eqe" firstAttribute="top" secondItem="OxY-bS-vXD" secondAttribute="top" id="MBF-l6-Kpb"/>
+                            <constraint firstAttribute="bottom" secondItem="ENv-V1-eqe" secondAttribute="bottom" id="gzX-sL-7KW"/>
+                            <constraint firstItem="ENv-V1-eqe" firstAttribute="leading" secondItem="Spb-Gn-9dW" secondAttribute="leading" id="zZo-CV-Rj5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wex-Qb-WSV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="tx3-92-bvQ">
+                            <connections>
+                                <action selector="didTapSaveButton:" destination="cBm-AD-AzJ" id="uVt-WR-i0I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ENv-V1-eqe" id="azG-eh-lYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNT-o3-8Yv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408.695652173913" y="411.83035714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nv5-OA-Hqz">

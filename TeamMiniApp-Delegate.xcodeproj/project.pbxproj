@@ -13,6 +13,8 @@
 		B911B84C27F689EA005C8041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B911B84A27F689EA005C8041 /* Main.storyboard */; };
 		B911B84E27F689EB005C8041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B911B84D27F689EB005C8041 /* Assets.xcassets */; };
 		B911B85127F689EB005C8041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B911B84F27F689EB005C8041 /* LaunchScreen.storyboard */; };
+		B946DAFC27F6DC6500087928 /* TamagoTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946DAFB27F6DC6500087928 /* TamagoTopViewController.swift */; };
+		B946DAFE27F6DCC400087928 /* TamagoDeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946DAFD27F6DCC400087928 /* TamagoDeletionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B911B84D27F689EB005C8041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B911B85027F689EB005C8041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B911B85227F689EB005C8041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B946DAFB27F6DC6500087928 /* TamagoTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagoTopViewController.swift; sourceTree = "<group>"; };
+		B946DAFD27F6DCC400087928 /* TamagoDeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagoDeletionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				B911B84D27F689EB005C8041 /* Assets.xcassets */,
 				B911B84F27F689EB005C8041 /* LaunchScreen.storyboard */,
 				B911B85227F689EB005C8041 /* Info.plist */,
+				B946DAFB27F6DC6500087928 /* TamagoTopViewController.swift */,
+				B946DAFD27F6DCC400087928 /* TamagoDeletionViewController.swift */,
 			);
 			path = "TeamMiniApp-Delegate";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				B911B84927F689EA005C8041 /* ViewController.swift in Sources */,
 				B911B84527F689EA005C8041 /* AppDelegate.swift in Sources */,
+				B946DAFE27F6DCC400087928 /* TamagoDeletionViewController.swift in Sources */,
 				B911B84727F689EA005C8041 /* SceneDelegate.swift in Sources */,
+				B946DAFC27F6DC6500087928 /* TamagoTopViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ class TamagoDeletionViewController: UIViewController{
     }
 
     @IBAction func didTapSaveButton(_ sender: Any){
-        delegate?.set(count: foodItem?.number ?? 0)
+        delegate?.set(number: foodItem?.number ?? 0)
     }
 
     // カプセル化したrowsNumeberの操作

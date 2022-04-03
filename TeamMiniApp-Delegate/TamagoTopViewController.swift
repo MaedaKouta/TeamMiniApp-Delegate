@@ -22,7 +22,7 @@ class TamagoTopViewController: UIViewController, TamagoDeletionViewControllerDel
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "nextVC" {
+        if segue.identifier == "NextTamagoDeletionVC" {
             let nextVC = segue.destination as! TamagoDeletionViewController
             nextVC.delegate = self
             nextVC.congigure(item: foodItem)

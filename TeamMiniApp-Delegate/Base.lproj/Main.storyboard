@@ -49,7 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="編集"/>
                                 <connections>
-                                    <segue destination="98W-H6-QZt" kind="show" id="rJ6-eE-e3Z"/>
+                                    <segue destination="98W-H6-QZt" kind="show" id="qd1-TF-F7k"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4Z-OC-Qx0">
@@ -97,7 +97,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="編集"/>
                                 <connections>
-                                    <segue destination="cBm-AD-AzJ" kind="show" identifier="nextVC" id="feK-JZ-5ez"/>
+                                    <segue destination="cBm-AD-AzJ" kind="show" identifier="NextTamagoDeletionVC" id="feK-JZ-5ez"/>
                                 </connections>
                             </button>
                         </subviews>

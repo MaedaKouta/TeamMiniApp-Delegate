@@ -6,14 +6,13 @@
 //
 
 import UIKit
-protocol SaveMikanCountDelegate{
+protocol MikanListViewControllerDelegate{
     func saveMikanCount(mikanCount: Int)
 }
 
 class MikanListViewController: UIViewController {
-    
     public var mikanCount: Int = 0
-    public var delegate: SaveMikanCountDelegate?
+    public var delegate: MikanListViewControllerDelegate?
     private var mikanList: [String] = []
     @IBOutlet private weak var tableView: UITableView!
     
@@ -27,7 +26,6 @@ class MikanListViewController: UIViewController {
     
     @IBAction private func tappedMikanCountSaveButton(_ sender: Any) {
         delegate?.saveMikanCount(mikanCount: mikanList.count)
-        // dismiss(animated: true, completion: nil) // なぜか一つ前の画面に戻れない。下記のpopView~で対処
         navigationController?.popViewController(animated: true)
     }
     
@@ -48,9 +46,9 @@ extension MikanListViewController: UITableViewDelegate,UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            if editingStyle == .delete {
-                mikanList.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .automatic)
+        if editingStyle == .delete {
+            mikanList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 }

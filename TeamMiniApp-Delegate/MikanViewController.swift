@@ -5,18 +5,10 @@
 //  Created by 近藤米功 on 2022/04/03.
 //
 
-// TODO: viewDidLoadにmikanListViewController.delegate = selfと書いてデリゲートメソッドを発動させたいが、それができない。。
-
 import UIKit
 
 class MikanViewController: UIViewController {
     @IBOutlet private weak var MikanCountLabel: UILabel!
-    // var mikanListViewController = MikanListViewController() // 1:これだと値の受け渡しができない。なぜ。。
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // mikanListViewController.delegate = self
-    }
-
     @IBAction private func tappedMikanEditButton(_ sender: Any) {
         // MikanListViewControllerへの画面遷移
         performSegue(withIdentifier: "MikanSegue2", sender: nil)
@@ -29,9 +21,9 @@ class MikanViewController: UIViewController {
         mikanListViewController.delegate = self
     }
 }
-extension MikanViewController: SaveMikanCountDelegate{
+extension MikanViewController: MikanListViewControllerDelegate{
     // SaveMikanCountDelegateのデリゲートメソッド
     func saveMikanCount(mikanCount: Int) {
-        MikanCountLabel.text = String(mikanCount) // 2:これだと値の受け渡しができない。なぜ。。
+        MikanCountLabel.text = String(mikanCount)
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95A8FE1B27F96EA0007A4C2A /* MikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8FE1A27F96EA0007A4C2A /* MikanViewController.swift */; };
+		95A8FE1D27F96EAE007A4C2A /* MikanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8FE1C27F96EAE007A4C2A /* MikanListViewController.swift */; };
+		95A8FE2027F9726D007A4C2A /* MikanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A8FE1E27F9726D007A4C2A /* MikanTableViewCell.swift */; };
+		95A8FE2127F9726D007A4C2A /* MikanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A8FE1F27F9726D007A4C2A /* MikanTableViewCell.xib */; };
 		B911B84527F689EA005C8041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B84427F689EA005C8041 /* AppDelegate.swift */; };
 		B911B84727F689EA005C8041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B84627F689EA005C8041 /* SceneDelegate.swift */; };
 		B911B84927F689EA005C8041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B84827F689EA005C8041 /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95A8FE1A27F96EA0007A4C2A /* MikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikanViewController.swift; sourceTree = "<group>"; };
+		95A8FE1C27F96EAE007A4C2A /* MikanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikanListViewController.swift; sourceTree = "<group>"; };
+		95A8FE1E27F9726D007A4C2A /* MikanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikanTableViewCell.swift; sourceTree = "<group>"; };
+		95A8FE1F27F9726D007A4C2A /* MikanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MikanTableViewCell.xib; sourceTree = "<group>"; };
 		B911B84127F689EA005C8041 /* TeamMiniApp-Delegate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TeamMiniApp-Delegate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B911B84427F689EA005C8041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B911B84627F689EA005C8041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +67,14 @@
 				B911B84427F689EA005C8041 /* AppDelegate.swift */,
 				B911B84627F689EA005C8041 /* SceneDelegate.swift */,
 				B911B84827F689EA005C8041 /* ViewController.swift */,
+				95A8FE1A27F96EA0007A4C2A /* MikanViewController.swift */,
+				95A8FE1C27F96EAE007A4C2A /* MikanListViewController.swift */,
 				B911B84A27F689EA005C8041 /* Main.storyboard */,
 				B911B84D27F689EB005C8041 /* Assets.xcassets */,
 				B911B84F27F689EB005C8041 /* LaunchScreen.storyboard */,
 				B911B85227F689EB005C8041 /* Info.plist */,
+				95A8FE1E27F9726D007A4C2A /* MikanTableViewCell.swift */,
+				95A8FE1F27F9726D007A4C2A /* MikanTableViewCell.xib */,
 			);
 			path = "TeamMiniApp-Delegate";
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 			files = (
 				B911B85127F689EB005C8041 /* LaunchScreen.storyboard in Resources */,
 				B911B84E27F689EB005C8041 /* Assets.xcassets in Resources */,
+				95A8FE2127F9726D007A4C2A /* MikanTableViewCell.xib in Resources */,
 				B911B84C27F689EA005C8041 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A8FE1D27F96EAE007A4C2A /* MikanListViewController.swift in Sources */,
 				B911B84927F689EA005C8041 /* ViewController.swift in Sources */,
+				95A8FE2027F9726D007A4C2A /* MikanTableViewCell.swift in Sources */,
 				B911B84527F689EA005C8041 /* AppDelegate.swift in Sources */,
 				B911B84727F689EA005C8041 /* SceneDelegate.swift in Sources */,
+				95A8FE1B27F96EA0007A4C2A /* MikanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
